@@ -10,22 +10,24 @@
 class Config(object):
     WEIGHT_PATH = None
 
-    ORIGIN_DATA_PATH = "/opt/dataset/crowd_counting/shanghaitech/original/part_{}_final/"
+    HM_GT_PATH = "./heat_map/"
+
+    ORIGIN_DATA_PATH = "./opt/dataset/crowd_counting/shanghaitech/original/part_{}_final/"
 
     # 训练集目录
-    TRAIN_PATH = '/opt/dataset/crowd_counting/shanghaitech/formatted_trainval_{0}/train'
+    TRAIN_PATH = './opt/dataset/crowd_counting/shanghaitech/formatted_trainval_{0}/train'
     # 训练集Ground-Truth目录
-    TRAIN_GT_PATH = '/opt/dataset/crowd_counting/shanghaitech/formatted_trainval_{0}/train_den'
+    TRAIN_GT_PATH = './opt/dataset/crowd_counting/shanghaitech/formatted_trainval_{0}/train_den'
 
     # 验证集目录
-    VAL_PATH = '/opt/dataset/crowd_counting/shanghaitech/formatted_trainval_{0}/val'
+    VAL_PATH = './opt/dataset/crowd_counting/shanghaitech/formatted_trainval_{0}/val'
     # 验证集Ground_Truth目录
-    VAL_GT_PATH = '/opt/dataset/crowd_counting/shanghaitech/formatted_trainval_{0}/val_den'
+    VAL_GT_PATH = './opt/dataset/crowd_counting/shanghaitech/formatted_trainval_{0}/val_den'
 
     # 测试集目录
-    TEST_PATH = '/opt/dataset/crowd_counting/shanghaitech/original/part_{}_final//test_data/images/'
+    TEST_PATH = './opt/dataset/crowd_counting/shanghaitech/original/part_{}_final//test_data/images/'
     # 测试集Ground_Truth目录
-    TEST_GT_PATH = '/opt/dataset/crowd_counting/shanghaitech/original/part_{}_final/test_data/ground_truth_csv/'
+    TEST_GT_PATH = './opt/dataset/crowd_counting/shanghaitech/original/part_{}_final/test_data/ground_truth_csv/'
 
     EPOCHS = 200
     TRAIN_BATCH_SIZE = 1
@@ -40,7 +42,7 @@ class Config(object):
         :param ds: 数据集名称 A or B
         :return: None
         """
-        self.WEIGHT_PATH = '/tmp/mcnn-' + ds + '.{epoch:03d}.h5'  # 权重存放目录
+        self.WEIGHT_PATH = './tmp/mcnn-' + ds + '.{epoch:03d}.h5'  # 权重存放目录
         self.ORIGIN_DATA_PATH = self.ORIGIN_DATA_PATH.format(ds)
         self.TRAIN_PATH = self.TRAIN_PATH.format(ds)
         self.TRAIN_GT_PATH = self.TRAIN_GT_PATH.format(ds)

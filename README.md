@@ -21,7 +21,7 @@ keras复现人群数量估计网络["Single Image Crowd Counting via Multi Colum
 
 2. 创建数据存放目录$ORIGIN_DATA_PATH
     ```shell
-    mkdir /opt/dataset/crowd_counting/shanghaitech/original
+    mkdir ./opt/dataset/crowd_counting/shanghaitech/original
     ```
 
 3. 将```part_A_final```和```part_B_final```存放到$ORIGIN_DATA_PATH目录下
@@ -59,8 +59,8 @@ a)下载训练模型
 b) 如下命令分别测试A和B
 
 ```shell
-python test.py --dataset A --weight_path /tmp/mcnn-A.160.h5 --output_dir /tmp/mcnn_A
-python test.py --dataset B --weight_path /tmp/mcnn-B.035.h5 --output_dir /tmp/mcnn_B
+python test.py --dataset A --weight_path ./tmp/mcnn-A.160.h5 --output_dir ./tmp/mcnn_A
+python test.py --dataset B --weight_path ./tmp/mcnn-B.035.h5 --output_dir ./tmp/mcnn_B
 ```
 
 
